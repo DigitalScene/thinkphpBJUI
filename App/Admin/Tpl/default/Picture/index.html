@@ -1,0 +1,28 @@
+<div class="bjui-pageHeader">
+    <form action="#" id="pageForm"  method="post" class="pageForm" data-toggle="ajaxsearch">
+       <!-- <input type="hidden" name="pageSize" value="{$Think.session.pageSize}">
+        <input type="hidden" name="pageCurrent" value="$Think.session.pageCurrent">
+        <input type="hidden" name="orderField" value="{$Think.session.orderField}">
+        <input type="hidden" name="orderDirection" value="{$Think.session.orderDirection}">-->
+        <div class="bjui-searchBar">
+            <label>标题：</label><input type="text" name="search[title]" value="{$search.title}"/>
+            <label>内容：</label><input type="text" name="search[content]" value="{$search.content}">
+            <button type="submit" class="btn-default" >查询</button>
+            <div class="pull-right">
+                <div class="btn-group">
+                    <button type="button" class="btn-default dropdown-toggle" data-toggle="dropdown" data-icon="copy">功能操作<span class="caret"></span> </button>
+                    <ul class="dropdown-menu right" role="menu">
+                        <li><a href="#" data-toggle="dialog" data-width="1000" data-height="600" data-id="dialog-mask" data-mask="true"><i class="fa fa-plus "></i>新增数据 </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<div class="bjui-pageContent">
+    <!--内容区-->
+   hello
+</div>
+<include file="./App/Admin/Tpl/default/Common/pageFooter.html"/>
