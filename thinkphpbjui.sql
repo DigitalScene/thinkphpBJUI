@@ -10,31 +10,13 @@ Target Server Type    : MYSQL
 Target Server Version : 50547
 File Encoding         : 65001
 
-Date: 2016-04-28 11:46:56
+Date: 2016-05-04 10:16:47
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for `discene`
--- ----------------------------
-DROP TABLE IF EXISTS `discene`;
-CREATE TABLE `discene` (
-  `id` int(11) NOT NULL DEFAULT '0',
-  `name` varchar(50) DEFAULT NULL,
-  `ProjectID` int(11) DEFAULT NULL,
-  `creatingDate` date DEFAULT NULL,
-  `creatingPer` varchar(50) DEFAULT NULL,
-  `desc` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of discene
--- ----------------------------
-
--- ----------------------------
--- Table structure for `ec_access`
+-- Table structure for ec_access
 -- ----------------------------
 DROP TABLE IF EXISTS `ec_access`;
 CREATE TABLE `ec_access` (
@@ -118,7 +100,7 @@ INSERT INTO `ec_access` VALUES ('2', '1', '1', '0', null);
 INSERT INTO `ec_access` VALUES ('2', '48', '3', '45', null);
 
 -- ----------------------------
--- Table structure for `ec_article`
+-- Table structure for ec_article
 -- ----------------------------
 DROP TABLE IF EXISTS `ec_article`;
 CREATE TABLE `ec_article` (
@@ -150,7 +132,7 @@ INSERT INTO `ec_article` VALUES ('6', '5', '全球数据中心市场格局生变
 INSERT INTO `ec_article` VALUES ('7', '5', '云计算很热 但何时能够大规模商用？', '86', '', '云计算很热 但何时能够大规模商用？', '1', '什么是云计算，至今很多人可能都不清楚。金蝶国际软件集团董事局主席兼首席执行官徐少春笑称，很多人都问过他，他的回答是：“如果一个东西能够说得很懂，说明这个东西就没有太大价值。正是因为云计算蕴藏着太多技术、太多价值，所以他存在巨大的机会。”', '', '<p style=\"text-indent:2em;\">\r\n	什么是云计算，至今很多人可能都不清楚。金蝶国际软件集团董事局主席兼首席执行官徐少春笑称，很多人都问过他，他的回答是：“如果一个东西能够说得很懂，说明这个东西就没有太大价值。正是因为云计算蕴藏着太多技术、太多价值，所以他存在巨大的机会。”\r\n</p>\r\n<p style=\"text-indent:2em;\">\r\n	对于云计算何时“开花结果”？中国宽带资本董事长、创始合伙人田溯宁表示，“天时比什么都重要”。他解释说，就像早期我们做互联网的并不是因为我们聪明，或者有很多能力，而是时候赶得好，那时候互联网刚刚开始，坚持１０年都有成就。“我觉得ＩＴ行业就有这种好处，每１０年有一次变革，云计算是３０年未有的一次变革。”\r\n</p>\r\n<p style=\"text-indent:2em;\">\r\n	云计算是否安全\r\n</p>\r\n<p style=\"text-indent:2em;\">\r\n	对于云计算，主要时间在美国硅谷的fortinet创始人、董事长谢青表示，“将给中国一个很好的机会。”他表示，云计算改变了互联网的结构，云计算给了很多厂商、很多用户比较平等的新机会。\r\n</p>\r\n<p style=\"text-indent:2em;\">\r\n	对于外界普遍关心的云计算是否安全？谢青表示并不担心，他举例说：３０～４０年前大家使用信用卡，都很担心，这需要一个过程，云计算的安全为外界接受也需要有一个过程，信用卡至今每年都要处理一些不安全的问题。“把东西放在云端，我利用起来会比较方便，但我也要有一部分的损失，就看中间怎么平衡，采取多少安全手续。”他表示，找到一个平衡点，云计算才能不断往前发展。\r\n</p>\r\n<p style=\"text-indent:2em;\">\r\n	云计算何时能大规模商用\r\n</p>\r\n<p style=\"text-indent:2em;\">\r\n	虽然目前云计算很热，但何时能尽快大规模变成商用赚钱？徐少春表示“过程会比较曲折，但只有与商业结合起来才能产生价值。”\r\n</p>\r\n<p style=\"text-indent:2em;\">\r\n	怎么与商业结合起来？徐少春建议要让企业高层及每一名员工感觉到云服务带来的价值。原来ＥＲＰ给少数人用的，实际上ＥＲＰ可以给所有员工使用，移动互联网可以做到这一点，岗位变成了移动岗位，你可以在上厕所的时候审批工作流。现在有流行的说法，工作生活化，在家里就可以办公，像我们这样从事ＥＲＰ的公司，云计算给我们带来了巨大的机会。“我想也只有和商业应用起来，才真正让云计算与商业、企业产生很大的互动。”\r\n</p>', '0', '1431308856445', '1', '0', null);
 
 -- ----------------------------
--- Table structure for `ec_article_reply`
+-- Table structure for ec_article_reply
 -- ----------------------------
 DROP TABLE IF EXISTS `ec_article_reply`;
 CREATE TABLE `ec_article_reply` (
@@ -170,7 +152,7 @@ CREATE TABLE `ec_article_reply` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `ec_category`
+-- Table structure for ec_category
 -- ----------------------------
 DROP TABLE IF EXISTS `ec_category`;
 CREATE TABLE `ec_category` (
@@ -205,7 +187,7 @@ INSERT INTO `ec_category` VALUES ('3', '1', '2', 'article', '公司新闻', '1',
 INSERT INTO `ec_category` VALUES ('7', '2', '2', 'product', '客户案例', '1', '0', null, null, null, null);
 
 -- ----------------------------
--- Table structure for `ec_channel`
+-- Table structure for ec_channel
 -- ----------------------------
 DROP TABLE IF EXISTS `ec_channel`;
 CREATE TABLE `ec_channel` (
@@ -254,7 +236,7 @@ INSERT INTO `ec_channel` VALUES ('18', '4', '0', 'structruing', '/Article/index/
 INSERT INTO `ec_channel` VALUES ('19', '4', '0', 'soft', '/Article/index/code/soft', 'article', '2', '1', '工具软件', null, null, null, null, '0', null, null, null, null);
 
 -- ----------------------------
--- Table structure for `ec_config`
+-- Table structure for ec_config
 -- ----------------------------
 DROP TABLE IF EXISTS `ec_config`;
 CREATE TABLE `ec_config` (
@@ -310,7 +292,47 @@ INSERT INTO `ec_config` VALUES ('36', 'input', '手机网站每页显示文章�
 INSERT INTO `ec_config` VALUES ('37', 'input', '手机网站概述中允许使用的html标签78', 'mobileSummaryHtmlTags', '', '手机网站概述中允许使用的html标签，可以自行添加，如：&amp;amp;amp;amp;amp;amp;amp;amp;lt;b&amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;lt;img&amp;amp;amp;amp;amp;amp;amp;amp;gt;', '0', null, null, null, null);
 
 -- ----------------------------
--- Table structure for `ec_leftmenu`
+-- Table structure for ec_dataupload
+-- ----------------------------
+DROP TABLE IF EXISTS `ec_dataupload`;
+CREATE TABLE `ec_dataupload` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `projectName` varchar(50) DEFAULT NULL,
+  `projectID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `dataUploadName` (`projectName`)
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ec_dataupload
+-- ----------------------------
+INSERT INTO `ec_dataupload` VALUES ('22', '周星驰主题电影展览馆', '15');
+INSERT INTO `ec_dataupload` VALUES ('18', '音乐博览馆', '13');
+INSERT INTO `ec_dataupload` VALUES ('21', '蜡像艺术馆', '14');
+
+-- ----------------------------
+-- Table structure for ec_discene
+-- ----------------------------
+DROP TABLE IF EXISTS `ec_discene`;
+CREATE TABLE `ec_discene` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  `creatingDate` date DEFAULT NULL,
+  `creatingPer` varchar(50) DEFAULT NULL,
+  `desc` varchar(200) DEFAULT NULL,
+  `dataUploadID` int(11) DEFAULT NULL,
+  `isDel` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ec_discene
+-- ----------------------------
+INSERT INTO `ec_discene` VALUES ('3', '大厅场景', '2016-05-03', 'yang', '飘渺仙域', '22', '0');
+INSERT INTO `ec_discene` VALUES ('4', '侧室场景', '2016-05-03', 'qiu', '阳光明媚', '22', '1');
+
+-- ----------------------------
+-- Table structure for ec_leftmenu
 -- ----------------------------
 DROP TABLE IF EXISTS `ec_leftmenu`;
 CREATE TABLE `ec_leftmenu` (
@@ -333,22 +355,16 @@ CREATE TABLE `ec_leftmenu` (
 -- ----------------------------
 -- Records of ec_leftmenu
 -- ----------------------------
-INSERT INTO `ec_leftmenu` VALUES ('2', '0', '2', '2', 'product', 'group', '图片管理', null, '45', '#', '1', null, null);
-INSERT INTO `ec_leftmenu` VALUES ('41', '2', '2', '1', 'system', 'dashboard', '图片上传', null, null, 'Picture/index', '1', null, null);
 INSERT INTO `ec_leftmenu` VALUES ('10', '0', '10', '2', 'product', 'sitemap', '用户管理', null, '', '#', '1', null, null);
-INSERT INTO `ec_leftmenu` VALUES ('12', '0', '12', '3', 'product', 'beer', '音频管理', null, '', '#', '1', null, null);
 INSERT INTO `ec_leftmenu` VALUES ('11', '3', '1', '5', 'system', 'globe', '机构管理', null, '', 'Admin/Branch/index', '1', null, null);
 INSERT INTO `ec_leftmenu` VALUES ('26', '10', '10', null, 'system', 'file', '用户列表', null, null, 'Admin/User/index', '1', null, null);
 INSERT INTO `ec_leftmenu` VALUES ('28', '10', '10', null, 'system', 'file', '角色管理', null, null, 'Admin/Access/roleList', '1', null, null);
-INSERT INTO `ec_leftmenu` VALUES ('34', '12', '12', null, 'system', 'file', '音频上传', null, null, 'Admin/SysData/index', '1', null, null);
-INSERT INTO `ec_leftmenu` VALUES ('35', '12', '12', null, 'system', 'file', '音频下载', null, null, 'Admin/SysData/restore', '1', null, null);
-INSERT INTO `ec_leftmenu` VALUES ('36', '12', '12', null, 'system', 'file', '数据库压缩包', null, null, 'Admin/SysData/zipList', '1', null, null);
-INSERT INTO `ec_leftmenu` VALUES ('37', '12', '12', null, 'system', 'file', '数据库优化修复', null, null, 'Admin/SysData/repair', '1', null, null);
-INSERT INTO `ec_leftmenu` VALUES ('6', '5', '5', null, 'system', 'file', '项目操作', '', '', 'Project/index', '1', '', '');
+INSERT INTO `ec_leftmenu` VALUES ('7', '5', '5', '6', 'system', 'file', '项目进度', null, null, 'Process/index', '1', null, null);
+INSERT INTO `ec_leftmenu` VALUES ('6', '5', '5', '4', 'system', 'file', '项目列表', '', '', 'Project/index', '1', '', '');
 INSERT INTO `ec_leftmenu` VALUES ('5', '0', '5', null, 'system', 'group', '项目管理', '', '', '#', '1', '', '');
 
 -- ----------------------------
--- Table structure for `ec_node`
+-- Table structure for ec_node
 -- ----------------------------
 DROP TABLE IF EXISTS `ec_node`;
 CREATE TABLE `ec_node` (
@@ -420,7 +436,7 @@ INSERT INTO `ec_node` VALUES ('47', 'add', '添加栏目', '1', '', '0', '45', '
 INSERT INTO `ec_node` VALUES ('48', 'edit', '编辑栏目', '1', '', '0', '45', '3');
 
 -- ----------------------------
--- Table structure for `ec_operationlog`
+-- Table structure for ec_operationlog
 -- ----------------------------
 DROP TABLE IF EXISTS `ec_operationlog`;
 CREATE TABLE `ec_operationlog` (
@@ -429,14 +445,189 @@ CREATE TABLE `ec_operationlog` (
   `cUid` int(11) DEFAULT NULL,
   `cTime` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=108 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ec_operationlog
 -- ----------------------------
+INSERT INTO `ec_operationlog` VALUES ('1', 'INSERT INTO `ec_project` () VALUES ()', '1', '1462010676');
+INSERT INTO `ec_operationlog` VALUES ('2', 'INSERT INTO `ec_project` () VALUES ()', '1', '1462010700');
+INSERT INTO `ec_operationlog` VALUES ('3', 'INSERT INTO `ec_project` () VALUES ()', '1', '1462010731');
+INSERT INTO `ec_operationlog` VALUES ('4', 'INSERT INTO `ec_project` (`id`,`name`,`creatingPer`,`desc`) VALUES (0,\'ywr\',\'te\',\'twer\')', '1', '1462011196');
+INSERT INTO `ec_operationlog` VALUES ('5', 'INSERT INTO `ec_project` (`id`,`name`,`creatingDate`,`creatingPer`,`desc`) VALUES (0,\'dfasd\',\'2016-04-30 18:15:13\',\'fsdfa\',\'fadsfafd\')', '1', '1462011320');
+INSERT INTO `ec_operationlog` VALUES ('6', 'INSERT INTO `ec_project` (`id`,`name`,`creatingDate`,`creatingPer`,`desc`) VALUES (0,\'fsdf\',\'2016-04-30 18:15:29\',\'afsd\',\'fasd\')', '1', '1462011342');
+INSERT INTO `ec_operationlog` VALUES ('7', 'INSERT INTO `ec_project` (`id`,`name`,`creatingDate`,`creatingPer`,`desc`) VALUES (0,\'fas\',\'2016-04-30 18:17:26\',\'fasd\',\'afsdf\')', '1', '1462011455');
+INSERT INTO `ec_operationlog` VALUES ('8', 'INSERT INTO `ec_project` (`id`,`name`,`creatingDate`,`creatingPer`,`status`,`desc`) VALUES (0,\'qiu\',\'2016-04-30 18:18:00\',\'qiu\',0,\'adf\')', '1', '1462011491');
+INSERT INTO `ec_operationlog` VALUES ('9', 'INSERT INTO `ec_project` (`id`,`name`,`creatingDate`,`creatingPer`,`status`,`desc`) VALUES (0,\'jian\',\'2016-04-30 18:25:36\',\'jian\',0,\'好项目\')', '1', '1462011948');
+INSERT INTO `ec_operationlog` VALUES ('10', 'DELETE FROM `ec_project` WHERE ( id=11 )', '1', '1462015352');
+INSERT INTO `ec_operationlog` VALUES ('11', 'DELETE FROM `ec_project` WHERE ( id=10 )', '1', '1462015359');
+INSERT INTO `ec_operationlog` VALUES ('12', 'INSERT INTO `ec_project` (`isDel`,`id`,`name`,`creatingDate`,`creatingPer`,`status`,`desc`) VALUES (0,0,\'yang\',\'2016-04-30 19:27:51\',\'fasdfd\',0,\'fasd\')', '1', '1462015680');
+INSERT INTO `ec_operationlog` VALUES ('13', 'UPDATE `ec_project` SET `isDel`=1 WHERE ( id=12 )', '1', '1462015702');
+INSERT INTO `ec_operationlog` VALUES ('14', 'INSERT INTO `ec_project` (`isDel`,`id`,`name`,`creatingDate`,`creatingPer`,`status`,`desc`) VALUES (0,0,\'音乐博览馆\',\'2016-05-01 01:27:18\',\'jian\',0,\'好馆\')', '1', '1462037271');
+INSERT INTO `ec_operationlog` VALUES ('15', 'UPDATE `ec_project` SET `isDel`=1 WHERE ( id=13 )', '1', '1462080657');
+INSERT INTO `ec_operationlog` VALUES ('16', 'UPDATE `ec_project` SET `isDel`=1 WHERE ( id=13 )', '1', '1462112297');
+INSERT INTO `ec_operationlog` VALUES ('17', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462135793');
+INSERT INTO `ec_operationlog` VALUES ('18', 'UPDATE `ec_project` SET `name`=\'图书艺术馆\',`creatingDate`=\'2016-04-29\',`creatingPer`=\'yang\',`desc`=\'好项目\',`status`=1,`isDel`=0,`processID`=null WHERE ( `id` = 1 )', '1', '1462135830');
+INSERT INTO `ec_operationlog` VALUES ('19', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462136588');
+INSERT INTO `ec_operationlog` VALUES ('20', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462173008');
+INSERT INTO `ec_operationlog` VALUES ('21', 'UPDATE `ec_project` SET `name`=\'图书艺术馆\',`creatingDate`=\'2016-04-29\',`creatingPer`=\'yang\',`desc`=\'好项目\',`status`=1,`isDel`=0 WHERE ( `id` = 1 )', '1', '1462173121');
+INSERT INTO `ec_operationlog` VALUES ('22', 'INSERT INTO `ec_dataupload` (`dataUploadName`) VALUES (\'图书艺术馆\')', '1', '1462173121');
+INSERT INTO `ec_operationlog` VALUES ('23', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462173282');
+INSERT INTO `ec_operationlog` VALUES ('24', 'INSERT INTO `ec_dataupload` (`dataUploadName`) VALUES (\'音乐博览馆\')', '1', '1462173282');
+INSERT INTO `ec_operationlog` VALUES ('25', 'INSERT INTO `ec_process` (`projectID`,`projectName`,`dataUploadID`,`isFinishDataUpload`,`isFinishPhotoEdit`,`isFinishSphericalGraph`,`disceneMakingID`,`isFinishDisceneMaking`,`dataIntegrationID`,`isFinishDataIntegration`) VALUES (13,\'音乐博览馆\',null,0,0,0,null,0,null,0)', '1', '1462173282');
+INSERT INTO `ec_operationlog` VALUES ('26', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462174856');
+INSERT INTO `ec_operationlog` VALUES ('27', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (13,\'音乐博览馆\')', '1', '1462174856');
+INSERT INTO `ec_operationlog` VALUES ('28', 'INSERT INTO `ec_process` (`projectID`,`projectName`,`dataUploadID`,`isFinishDataUpload`,`isFinishPhotoEdit`,`isFinishSphericalGraph`,`disceneMakingID`,`isFinishDisceneMaking`,`dataIntegrationID`,`isFinishDataIntegration`) VALUES (13,\'音乐博览馆\',null,0,0,0,null,0,null,0)', '1', '1462174856');
+INSERT INTO `ec_operationlog` VALUES ('29', 'UPDATE `ec_project` SET `name`=\'图书艺术馆\',`creatingDate`=\'2016-04-29\',`creatingPer`=\'yang\',`desc`=\'好项目\',`status`=1,`isDel`=0 WHERE ( `id` = 1 )', '1', '1462174986');
+INSERT INTO `ec_operationlog` VALUES ('30', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (1,\'图书艺术馆\')', '1', '1462174986');
+INSERT INTO `ec_operationlog` VALUES ('31', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462175303');
+INSERT INTO `ec_operationlog` VALUES ('32', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (13,\'音乐博览馆\')', '1', '1462175303');
+INSERT INTO `ec_operationlog` VALUES ('33', 'UPDATE `ec_project` SET `name`=\'图书艺术馆\',`creatingDate`=\'2016-04-29\',`creatingPer`=\'yang\',`desc`=\'好项目\',`status`=1,`isDel`=0 WHERE ( `id` = 1 )', '1', '1462175342');
+INSERT INTO `ec_operationlog` VALUES ('34', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (1,\'图书艺术馆\')', '1', '1462175342');
+INSERT INTO `ec_operationlog` VALUES ('35', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462175478');
+INSERT INTO `ec_operationlog` VALUES ('36', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (13,\'音乐博览馆\')', '1', '1462175479');
+INSERT INTO `ec_operationlog` VALUES ('37', 'UPDATE `ec_project` SET `name`=\'图书艺术馆\',`creatingDate`=\'2016-04-29\',`creatingPer`=\'yang\',`desc`=\'好项目\',`status`=1,`isDel`=0 WHERE ( `id` = 1 )', '1', '1462175576');
+INSERT INTO `ec_operationlog` VALUES ('38', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (1,\'图书艺术馆\')', '1', '1462175576');
+INSERT INTO `ec_operationlog` VALUES ('39', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462175860');
+INSERT INTO `ec_operationlog` VALUES ('40', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (13,\'音乐博览馆\')', '1', '1462175860');
+INSERT INTO `ec_operationlog` VALUES ('41', 'UPDATE `ec_project` SET `name`=\'图书艺术馆\',`creatingDate`=\'2016-04-29\',`creatingPer`=\'yang\',`desc`=\'好项目\',`status`=1,`isDel`=0 WHERE ( `id` = 1 )', '1', '1462175930');
+INSERT INTO `ec_operationlog` VALUES ('42', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462176029');
+INSERT INTO `ec_operationlog` VALUES ('43', 'UPDATE `ec_project` SET `name`=\'图书艺术馆\',`creatingDate`=\'2016-04-29\',`creatingPer`=\'yang\',`desc`=\'好项目\',`status`=1,`isDel`=0 WHERE ( `id` = 1 )', '1', '1462176353');
+INSERT INTO `ec_operationlog` VALUES ('44', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462176429');
+INSERT INTO `ec_operationlog` VALUES ('45', 'UPDATE `ec_project` SET `name`=\'图书艺术馆\',`creatingDate`=\'2016-04-29\',`creatingPer`=\'yang\',`desc`=\'好项目\',`status`=1,`isDel`=0 WHERE ( `id` = 1 )', '1', '1462176458');
+INSERT INTO `ec_operationlog` VALUES ('46', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462176544');
+INSERT INTO `ec_operationlog` VALUES ('47', 'UPDATE `ec_project` SET `name`=\'图书艺术馆\',`creatingDate`=\'2016-04-29\',`creatingPer`=\'yang\',`desc`=\'好项目\',`status`=1,`isDel`=0 WHERE ( `id` = 1 )', '1', '1462178779');
+INSERT INTO `ec_operationlog` VALUES ('48', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462178909');
+INSERT INTO `ec_operationlog` VALUES ('49', 'UPDATE `ec_project` SET `name`=\'图书艺术馆\',`creatingDate`=\'2016-04-29\',`creatingPer`=\'yang\',`desc`=\'好项目\',`status`=1,`isDel`=0 WHERE ( `id` = 1 )', '1', '1462179120');
+INSERT INTO `ec_operationlog` VALUES ('50', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462179210');
+INSERT INTO `ec_operationlog` VALUES ('51', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462179347');
+INSERT INTO `ec_operationlog` VALUES ('52', 'UPDATE `ec_project` SET `name`=\'图书艺术馆\',`creatingDate`=\'2016-04-29\',`creatingPer`=\'yang\',`desc`=\'好项目\',`status`=1,`isDel`=0 WHERE ( `id` = 1 )', '1', '1462179864');
+INSERT INTO `ec_operationlog` VALUES ('53', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462179951');
+INSERT INTO `ec_operationlog` VALUES ('54', 'UPDATE `ec_project` SET `name`=\'图书艺术馆\',`creatingDate`=\'2016-04-29\',`creatingPer`=\'yang\',`desc`=\'好项目\',`status`=1,`isDel`=0 WHERE ( `id` = 1 )', '1', '1462180144');
+INSERT INTO `ec_operationlog` VALUES ('55', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462180224');
+INSERT INTO `ec_operationlog` VALUES ('56', 'UPDATE `ec_project` SET `name`=\'图书艺术馆\',`creatingDate`=\'2016-04-29\',`creatingPer`=\'yang\',`desc`=\'好项目\',`status`=1,`isDel`=0 WHERE ( `id` = 1 )', '1', '1462180295');
+INSERT INTO `ec_operationlog` VALUES ('57', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462180365');
+INSERT INTO `ec_operationlog` VALUES ('58', 'UPDATE `ec_project` SET `name`=\'图书艺术馆\',`creatingDate`=\'2016-04-29\',`creatingPer`=\'yang\',`desc`=\'好项目\',`status`=1,`isDel`=0 WHERE ( `id` = 1 )', '1', '1462180383');
+INSERT INTO `ec_operationlog` VALUES ('59', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462180437');
+INSERT INTO `ec_operationlog` VALUES ('60', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (13,\'音乐博览馆\')', '1', '1462180437');
+INSERT INTO `ec_operationlog` VALUES ('61', 'INSERT INTO `ec_process` (`projectID`,`projectName`,`dataUploadID`,`isFinishDataUpload`,`isFinishPhotoEdit`,`isFinishSphericalGraph`,`disceneMakingID`,`isFinishDisceneMaking`,`dataIntegrationID`,`isFinishDataIntegration`) VALUES (13,\'音乐博览馆\',3,0,0,0,null,0,null,0)', '1', '1462180437');
+INSERT INTO `ec_operationlog` VALUES ('62', 'UPDATE `ec_project` SET `name`=\'图书艺术馆\',`creatingDate`=\'2016-04-29\',`creatingPer`=\'yang\',`desc`=\'好项目\',`status`=1,`isDel`=0 WHERE ( `id` = 1 )', '1', '1462180482');
+INSERT INTO `ec_operationlog` VALUES ('63', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (1,\'图书艺术馆\')', '1', '1462180482');
+INSERT INTO `ec_operationlog` VALUES ('64', 'INSERT INTO `ec_process` (`projectID`,`projectName`,`dataUploadID`,`isFinishDataUpload`,`isFinishPhotoEdit`,`isFinishSphericalGraph`,`disceneMakingID`,`isFinishDisceneMaking`,`dataIntegrationID`,`isFinishDataIntegration`) VALUES (1,\'图书艺术馆\',11,0,0,0,null,0,null,0)', '1', '1462180482');
+INSERT INTO `ec_operationlog` VALUES ('65', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462180643');
+INSERT INTO `ec_operationlog` VALUES ('66', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (13,\'音乐博览馆\')', '1', '1462180643');
+INSERT INTO `ec_operationlog` VALUES ('67', 'INSERT INTO `ec_process` (`projectID`,`projectName`,`dataUploadID`,`isFinishDataUpload`,`isFinishPhotoEdit`,`isFinishSphericalGraph`,`disceneMakingID`,`isFinishDisceneMaking`,`dataIntegrationID`,`isFinishDataIntegration`) VALUES (13,\'音乐博览馆\',null,0,0,0,null,0,null,0)', '1', '1462180643');
+INSERT INTO `ec_operationlog` VALUES ('68', 'UPDATE `ec_project` SET `name`=\'图书艺术馆\',`creatingDate`=\'2016-04-29\',`creatingPer`=\'yang\',`desc`=\'好项目\',`status`=1,`isDel`=0 WHERE ( `id` = 1 )', '1', '1462180750');
+INSERT INTO `ec_operationlog` VALUES ('69', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (1,\'图书艺术馆\')', '1', '1462180750');
+INSERT INTO `ec_operationlog` VALUES ('70', 'INSERT INTO `ec_process` (`projectID`,`projectName`,`dataUploadID`,`isFinishDataUpload`,`isFinishPhotoEdit`,`isFinishSphericalGraph`,`disceneMakingID`,`isFinishDisceneMaking`,`dataIntegrationID`,`isFinishDataIntegration`) VALUES (1,\'图书艺术馆\',13,0,0,0,null,0,null,0)', '1', '1462180750');
+INSERT INTO `ec_operationlog` VALUES ('71', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462180848');
+INSERT INTO `ec_operationlog` VALUES ('72', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (13,\'音乐博览馆\')', '1', '1462180848');
+INSERT INTO `ec_operationlog` VALUES ('73', 'INSERT INTO `ec_process` (`projectID`,`projectName`,`dataUploadID`,`isFinishDataUpload`,`isFinishPhotoEdit`,`isFinishSphericalGraph`,`disceneMakingID`,`isFinishDisceneMaking`,`dataIntegrationID`,`isFinishDataIntegration`) VALUES (13,\'音乐博览馆\',null,0,0,0,null,0,null,0)', '1', '1462180848');
+INSERT INTO `ec_operationlog` VALUES ('74', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462181157');
+INSERT INTO `ec_operationlog` VALUES ('75', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (13,\'音乐博览馆\')', '1', '1462181157');
+INSERT INTO `ec_operationlog` VALUES ('76', 'INSERT INTO `ec_process` (`projectID`,`projectName`,`dataUploadID`,`isFinishDataUpload`,`isFinishPhotoEdit`,`isFinishSphericalGraph`,`disceneMakingID`,`isFinishDisceneMaking`,`dataIntegrationID`,`isFinishDataIntegration`) VALUES (13,\'音乐博览馆\',null,0,0,0,null,0,null,0)', '1', '1462181157');
+INSERT INTO `ec_operationlog` VALUES ('77', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462181217');
+INSERT INTO `ec_operationlog` VALUES ('78', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (13,\'音乐博览馆\')', '1', '1462181217');
+INSERT INTO `ec_operationlog` VALUES ('79', 'INSERT INTO `ec_process` (`projectID`,`projectName`,`dataUploadID`,`isFinishDataUpload`,`isFinishPhotoEdit`,`isFinishSphericalGraph`,`disceneMakingID`,`isFinishDisceneMaking`,`dataIntegrationID`,`isFinishDataIntegration`) VALUES (13,\'音乐博览馆\',null,0,0,0,null,0,null,0)', '1', '1462181217');
+INSERT INTO `ec_operationlog` VALUES ('80', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462181315');
+INSERT INTO `ec_operationlog` VALUES ('81', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (13,\'音乐博览馆\')', '1', '1462181315');
+INSERT INTO `ec_operationlog` VALUES ('82', 'INSERT INTO `ec_process` (`projectID`,`projectName`,`dataUploadID`,`isFinishDataUpload`,`isFinishPhotoEdit`,`isFinishSphericalGraph`,`disceneMakingID`,`isFinishDisceneMaking`,`dataIntegrationID`,`isFinishDataIntegration`) VALUES (13,\'音乐博览馆\',17,0,0,0,null,0,null,0)', '1', '1462181315');
+INSERT INTO `ec_operationlog` VALUES ('83', 'UPDATE `ec_project` SET `name`=\'音乐博览馆\',`creatingDate`=\'2016-05-01\',`creatingPer`=\'jian\',`desc`=\'好馆\',`status`=1,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462181367');
+INSERT INTO `ec_operationlog` VALUES ('84', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (13,\'音乐博览馆\')', '1', '1462181367');
+INSERT INTO `ec_operationlog` VALUES ('85', 'INSERT INTO `ec_process` (`projectID`,`projectName`,`dataUploadID`,`isFinishDataUpload`,`isFinishPhotoEdit`,`isFinishSphericalGraph`,`disceneMakingID`,`isFinishDisceneMaking`,`dataIntegrationID`,`isFinishDataIntegration`) VALUES (13,\'音乐博览馆\',18,0,0,0,null,0,null,0)', '1', '1462181367');
+INSERT INTO `ec_operationlog` VALUES ('86', 'INSERT INTO `ec_project` (`isDel`,`id`,`name`,`creatingDate`,`creatingPer`,`status`,`desc`) VALUES (0,0,\'蜡像艺术馆\',\'2016-05-02 17:37:14\',\'qiu\',0,\'好蜡像馆\')', '1', '1462181874');
+INSERT INTO `ec_operationlog` VALUES ('87', 'UPDATE `ec_project` SET `status`=1 WHERE ( id=14 And isDel=0 )', '1', '1462183559');
+INSERT INTO `ec_operationlog` VALUES ('88', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (null,null)', '1', '1462183559');
+INSERT INTO `ec_operationlog` VALUES ('89', 'UPDATE `ec_project` SET `status`=1 WHERE ( id=1 And isDel=0 )', '1', '1462183589');
+INSERT INTO `ec_operationlog` VALUES ('90', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (null,null)', '1', '1462183589');
+INSERT INTO `ec_operationlog` VALUES ('91', 'UPDATE `ec_project` SET `name`=\'蜡像艺术馆\',`creatingDate`=\'2016-05-02\',`creatingPer`=\'qiu\',`desc`=\'好蜡像馆\',`status`=1,`isDel`=0 WHERE ( `id` = 14 )', '1', '1462184681');
+INSERT INTO `ec_operationlog` VALUES ('92', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (14,\'蜡像艺术馆\')', '1', '1462184681');
+INSERT INTO `ec_operationlog` VALUES ('93', 'INSERT INTO `ec_process` (`projectID`,`projectName`,`dataUploadID`,`isFinishDataUpload`,`isFinishPhotoEdit`,`isFinishSphericalGraph`,`disceneMakingID`,`isFinishDisceneMaking`,`dataIntegrationID`,`isFinishDataIntegration`,`isDel`) VALUES (14,\'蜡像艺术馆\',21,0,0,0,null,0,null,0,0)', '1', '1462184681');
+INSERT INTO `ec_operationlog` VALUES ('94', 'UPDATE `ec_process` SET `isDel`=1 WHERE ( projectID=14 )', '1', '1462184723');
+INSERT INTO `ec_operationlog` VALUES ('95', 'UPDATE `ec_project` SET `isDel`=1 WHERE ( id=14 )', '1', '1462184723');
+INSERT INTO `ec_operationlog` VALUES ('96', 'INSERT INTO `ec_project` (`isDel`,`id`,`name`,`creatingDate`,`creatingPer`,`status`,`desc`) VALUES (0,0,\'周星驰主题电影展览馆\',\'2016-05-02 18:25:55\',\'chen\',0,\'好好看的展览馆\')', '1', '1462184808');
+INSERT INTO `ec_operationlog` VALUES ('97', 'UPDATE `ec_project` SET `isDel`=1 WHERE ( id=15 )', '1', '1462184895');
+INSERT INTO `ec_operationlog` VALUES ('98', 'UPDATE `ec_project` SET `name`=\'周星驰主题电影展览馆\',`creatingDate`=\'2016-05-02\',`creatingPer`=\'chen\',`desc`=\'好好看的展览馆\',`status`=1,`isDel`=0 WHERE ( `id` = 15 )', '1', '1462195789');
+INSERT INTO `ec_operationlog` VALUES ('99', 'INSERT INTO `ec_dataupload` (`projectID`,`projectName`) VALUES (15,\'周星驰主题电影展览馆\')', '1', '1462195789');
+INSERT INTO `ec_operationlog` VALUES ('100', 'INSERT INTO `ec_process` (`projectID`,`projectName`,`dataUploadID`,`isFinishDataUpload`,`isFinishPhotoEdit`,`isFinishSphericalGraph`,`disceneMakingID`,`isFinishDisceneMaking`,`dataIntegrationID`,`isFinishDataIntegration`,`isDel`) VALUES (15,\'周星驰主题电影展览馆\',22,0,0,0,null,0,null,0,0)', '1', '1462195790');
+INSERT INTO `ec_operationlog` VALUES ('101', 'INSERT INTO `ec_discene` (`id`,`dataUploadID`,`name`,`creatingDate`,`creatingPer`,`desc`) VALUES (0,22,\'大厅场景\',\'2016-05-03 11:20:53\',\'yang\',\'飘渺仙域\')', '1', '1462245677');
+INSERT INTO `ec_operationlog` VALUES ('102', 'UPDATE `ec_process` SET `projectID`=15,`projectName`=\'周星驰主题电影展览馆\',`dataUploadID`=22,`dataUploadStatus`=1,`isFinishPhotoEdit`=0,`isFinishSphericalGraph`=0,`disceneMakingID`=null,`isFinishDisceneMaking`=0,`dataIntegrationID`=null,`isFinishDataIntegration`=0,`isDel`=0 WHERE ( `id` = 13 )', '1', '1462284511');
+INSERT INTO `ec_operationlog` VALUES ('103', 'INSERT INTO `ec_discene` (`id`,`dataUploadID`,`name`,`creatingDate`,`creatingPer`,`desc`) VALUES (0,22,\'大厅场景\',\'2016-05-03 22:08:04\',\'yang\',\'飘渺仙域\')', '1', '1462284511');
+INSERT INTO `ec_operationlog` VALUES ('104', 'UPDATE `ec_process` SET `id`=13,`projectID`=15,`projectName`=\'周星驰主题电影展览馆\',`dataUploadID`=22,`dataUploadStatus`=1,`isFinishPhotoEdit`=0,`isFinishSphericalGraph`=0,`disceneMakingID`=null,`isFinishDisceneMaking`=0,`dataIntegrationID`=null,`isFinishDataIntegration`=0,`isDel`=0 WHERE ( dataUploadID=22 )', '1', '1462284677');
+INSERT INTO `ec_operationlog` VALUES ('105', 'INSERT INTO `ec_discene` (`id`,`dataUploadID`,`name`,`creatingDate`,`creatingPer`,`desc`) VALUES (0,22,\'大厅场景\',\'2016-05-03 22:10:58\',\'yang\',\'飘渺仙域\')', '1', '1462284677');
+INSERT INTO `ec_operationlog` VALUES ('106', 'INSERT INTO `ec_discene` (`isDel`,`id`,`dataUploadID`,`name`,`creatingDate`,`creatingPer`,`desc`) VALUES (0,0,22,\'侧室场景\',\'2016-05-03 23:12:30\',\'qiu\',\'阳光明媚\')', '1', '1462288389');
+INSERT INTO `ec_operationlog` VALUES ('107', 'UPDATE `ec_discene` SET `isDel`=1 WHERE ( id=4 )', '1', '1462288417');
 
 -- ----------------------------
--- Table structure for `ec_role`
+-- Table structure for ec_picture
+-- ----------------------------
+DROP TABLE IF EXISTS `ec_picture`;
+CREATE TABLE `ec_picture` (
+  `id` int(11) NOT NULL DEFAULT '0',
+  `picsrc` varchar(50) DEFAULT NULL,
+  `disceneID` int(11) DEFAULT NULL,
+  `level` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ec_picture
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for ec_process
+-- ----------------------------
+DROP TABLE IF EXISTS `ec_process`;
+CREATE TABLE `ec_process` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `projectID` int(11) DEFAULT NULL,
+  `projectName` varchar(50) DEFAULT NULL,
+  `dataUploadID` int(11) DEFAULT NULL,
+  `dataUploadStatus` int(11) DEFAULT NULL,
+  `isFinishPhotoEdit` int(11) DEFAULT NULL,
+  `isFinishSphericalGraph` int(11) DEFAULT NULL,
+  `disceneMakingID` int(11) DEFAULT NULL,
+  `isFinishDisceneMaking` int(11) DEFAULT NULL,
+  `dataIntegrationID` int(11) DEFAULT NULL,
+  `isFinishDataIntegration` int(11) DEFAULT NULL,
+  `isDel` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `projectID` (`projectID`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ec_process
+-- ----------------------------
+INSERT INTO `ec_process` VALUES ('11', '13', '音乐博览馆', '18', '0', '0', '0', null, '0', null, '0', '0');
+INSERT INTO `ec_process` VALUES ('12', '14', '蜡像艺术馆', '21', '0', '0', '0', null, '0', null, '0', '1');
+INSERT INTO `ec_process` VALUES ('13', '15', '周星驰主题电影展览馆', '22', '1', '0', '0', null, '0', null, '0', '0');
+
+-- ----------------------------
+-- Table structure for ec_project
+-- ----------------------------
+DROP TABLE IF EXISTS `ec_project`;
+CREATE TABLE `ec_project` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  `creatingDate` date DEFAULT NULL,
+  `creatingPer` varchar(50) DEFAULT NULL,
+  `desc` varchar(200) DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
+  `isDel` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ec_project
+-- ----------------------------
+INSERT INTO `ec_project` VALUES ('1', '图书艺术馆', '2016-04-29', 'yang', '好项目', '0', '0');
+INSERT INTO `ec_project` VALUES ('12', 'yang', '2016-04-30', 'fasdfd', 'fasd', '0', '1');
+INSERT INTO `ec_project` VALUES ('13', '音乐博览馆', '2016-05-01', 'jian', '好馆', '1', '0');
+INSERT INTO `ec_project` VALUES ('14', '蜡像艺术馆', '2016-05-02', 'qiu', '好蜡像馆', '1', '1');
+INSERT INTO `ec_project` VALUES ('15', '周星驰主题电影展览馆', '2016-05-02', 'chen', '好好看的展览馆', '1', '0');
+
+-- ----------------------------
+-- Table structure for ec_role
 -- ----------------------------
 DROP TABLE IF EXISTS `ec_role`;
 CREATE TABLE `ec_role` (
@@ -459,7 +650,7 @@ INSERT INTO `ec_role` VALUES ('3', '领导', '1', '1', '拥有所有操作的读
 INSERT INTO `ec_role` VALUES ('4', '测试组', '1', '1', '测试');
 
 -- ----------------------------
--- Table structure for `ec_role_user`
+-- Table structure for ec_role_user
 -- ----------------------------
 DROP TABLE IF EXISTS `ec_role_user`;
 CREATE TABLE `ec_role_user` (
@@ -475,7 +666,7 @@ CREATE TABLE `ec_role_user` (
 INSERT INTO `ec_role_user` VALUES ('2', '1');
 
 -- ----------------------------
--- Table structure for `ec_user`
+-- Table structure for ec_user
 -- ----------------------------
 DROP TABLE IF EXISTS `ec_user`;
 CREATE TABLE `ec_user` (
@@ -507,41 +698,7 @@ CREATE TABLE `ec_user` (
 INSERT INTO `ec_user` VALUES ('1', '1', '小策一喋', 'admin', 'b9d11b3be25f5a1a7dc8ca04cd310b28', '小策一喋', '男', '1', '', '', '', '我是超级管理员 哈哈~~', '', 'Admin;Dangjian', '0', '1', '1387763092', '1', '1416885758');
 
 -- ----------------------------
--- Table structure for `picture`
--- ----------------------------
-DROP TABLE IF EXISTS `picture`;
-CREATE TABLE `picture` (
-  `id` int(11) NOT NULL DEFAULT '0',
-  `picsrc` varchar(50) DEFAULT NULL,
-  `disceneID` int(11) DEFAULT NULL,
-  `projectID` int(11) DEFAULT NULL,
-  `level` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of picture
--- ----------------------------
-
--- ----------------------------
--- Table structure for `project`
--- ----------------------------
-DROP TABLE IF EXISTS `project`;
-CREATE TABLE `project` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) DEFAULT NULL,
-  `creatingDate` date DEFAULT NULL,
-  `creatingPer` varchar(50) DEFAULT NULL,
-  `desc` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of project
--- ----------------------------
-
--- ----------------------------
--- Table structure for `trole`
+-- Table structure for trole
 -- ----------------------------
 DROP TABLE IF EXISTS `trole`;
 CREATE TABLE `trole` (
@@ -555,7 +712,7 @@ CREATE TABLE `trole` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `tuser`
+-- Table structure for tuser
 -- ----------------------------
 DROP TABLE IF EXISTS `tuser`;
 CREATE TABLE `tuser` (
@@ -576,7 +733,7 @@ INSERT INTO `tuser` VALUES ('1', '2015-04-23 09:07:15', '2015-04-23 09:07:19', '
 INSERT INTO `tuser` VALUES ('2', '2015-04-23 09:08:56', '2015-04-23 09:08:59', '赵策', '654321', '2015-04-23 09:09:13', '2015-04-23 09:09:16');
 
 -- ----------------------------
--- Table structure for `tuser_trole`
+-- Table structure for tuser_trole
 -- ----------------------------
 DROP TABLE IF EXISTS `tuser_trole`;
 CREATE TABLE `tuser_trole` (
