@@ -29,6 +29,9 @@ return array(
     /*系统备份数据库时每个sql分卷大小，单位字节*/
     'sqlFileSize'=>5242880,//该值不可太大，否则会导致内存溢出备份、恢复失败，合理大小在512k~10M,建议5M一卷
 
+    //配置调试信息
+    'SHOW_PAGE_TRACE'=>true,
+
     'LOAD_EXT_CONFIG' => 'config_site', // 加载扩展配置文件
 );
 ?>

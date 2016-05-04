@@ -291,8 +291,10 @@
         
         var search = function() {
             if ($target && $target.length) {
+
                 form = that.tools.getPagerForm($target, op)
-                
+
+
                 var data = $element.serializeJson(), _data = {}
                 
                 if (options.clearQuery) {
@@ -308,8 +310,13 @@
                 if (that.tools.getTarget() == Bjuiajax.NAVTAB) {
                     $target = $.CurrentNavtab
                     form    = that.tools.getPagerForm($target, op)
+
+
                     $element.navtab('reloadForm', options.clearQuery, options)
+
                 } else {
+
+
                     $target = $.CurrentDialog
                     form    = that.tools.getPagerForm($target, op)
                     $element.dialog('reloadForm', options.clearQuery, options)
@@ -326,6 +333,7 @@
                 search()
             }
         } else {
+
             search()
         }
     }
@@ -649,8 +657,9 @@
         if ($.validator) {
             $(document).on(BJUI.eventType.initUI, function(e) {
                 $(e.target).find('form[data-toggle="ajaxsearch"]').each(function() {
+
                     var $form = $(this), options = $form.data()
-                    
+
                     options.isValid = true
                     $form.validator({
                         valid: function(form) {
@@ -662,7 +671,7 @@
         } else {
             $(document).on('submit.bjui.bjuiajax.data-api', 'form[data-toggle="ajaxsearch"]', function(e) {
                 var $this   = $(this), options = $this.data()
-                
+
                 Plugin.call($this, 'doSearch', options)
                 
                 e.preventDefault()

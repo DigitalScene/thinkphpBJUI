@@ -1,0 +1,60 @@
+<div class="bjui-pageHeader">
+    <form id="pagerForm" data-toggle="ajaxsearch"  action="{:U($Think.ACTION_NAME)}" method="post">
+        <input type="hidden" name="pageSize" value="{$Think.session.pageSize}">
+        <input type="hidden" name="pageCurrent" value="{$Think.session.pageCurrent}">
+        <input type="hidden" name="orderField" value="{$Think.session.orderField}">
+        <input type="hidden" name="orderDirection" value="{$Think.session.orderDirection}">
+        <div class="bjui-searchBar">
+            <label>项目ID：</label><input type="text" name="search[projectID]" value="{$search.projectID}"/>　　
+            <label>项目名：</label><input type="text" name="search[projectName]" value="{$search.projectName}"/>
+            <button type="submit" class="btn-default" data-icon="search">查询</button>
+            <!--<div class="pull-right">-->
+                <!--<div class="btn-group">-->
+                    <!--<button type="button" class="btn-default dropdown-toggle" data-toggle="dropdown" data-icon="copy">功能操作<span class="caret"></span> </button>-->
+                    <!--<ul class="dropdown-menu right" role="menu">-->
+                        <!--<li><a href="{:U('add')}" data-toggle="dialog" data-width="950" data-height="300" data-id="dialog-mask" data-mask="true"><i class="fa fa-plus "></i>新增项目 </a> </li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+    </form>
+</div>
+
+<div class="bjui-pageContent">
+    <!--内容区-->
+    <table data-toggle="tablefixed" data-width="100%" data-nowrap="true">
+        <thead>
+        <tr>
+            <volist name="tableFields" id="tvo">
+                <th <if condition="$tvo.order eq 1">data-order-field="{$key}"</if>>{$tvo.name}</th>
+            </volist>
+
+        </tr>
+        </thead>
+
+        <volist name="list" id="vo">
+            <tr>
+                <volist name="tableFields" id="tvo">
+                    <td>{$vo.$key}</td>
+                </volist>
+                <!--<td>-->
+                    <!--<a href="{:U('edit?id='.$vo[id])}" class="btn btn-default"data-toggle="dialog" data-width="850" data-height="300" data-id="dialog-mask" data-mask="true">编辑</a>-->
+                    <!--<a href="{:U('remove?id='.$vo[id].'&status='.$vo[status])}" class="btn btn-red" data-toggle="doajax" data-confirm-msg="确定要删除该行信息吗？">删除</a>-->
+                    <!--<if condition="$vo[status] eq '项目尚未启动'">-->
+                        <!--<a href="{:U('startUp?id='.$vo[id])}" class="btn btn-green" data-toggle="doajax" data-confirm-msg="你确定启动项目么？">启动项目</a>-->
+                        <!--<elseif condition="$vo[status] neq '项目尚未启动'"/><a href="#" class="btn btn-green" disabled>已启动项目</a>-->
+                    <!--</if>-->
+                    <!--&lt;!&ndash;下面的写法是创建navTab&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="{:U('process?id='.$vo[id])}" class="btn btn-green" data-toggle="navtab" data-id="mynavtab" data-title="项目进度">项目进度</a>&ndash;&gt;-->
+                <!--</td>-->
+            </tr>
+        </volist>
+    </table>
+</div>
+
+<include file="./App/Admin/Tpl/default/Common/pageFooter.html"/>
+
+
+
+
+

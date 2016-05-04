@@ -1,0 +1,58 @@
+<div class="bjui-pageContent">
+    <form action="{:U($Think.ACTION_NAME)}" id="addForm" class="pageForm" data-toggle="validate" data-reload-navtab="true">
+        <input type="hidden" id="del" name="info[isDel]"   value="0">
+        <input type="hidden" id="pk" name="info[id]" value="{$info.id}">
+        <input type="hidden"  name="info[dataUploadID]" value="{$info.dataUploadID}">
+        <table class="table table-condensed table-hover" width="100%">
+            <tbody>
+            <tr>
+                <td colspan="2">
+                    <label class="control-label x100">场景名：</label>
+                    <input id="name" type="text" name="info[name]" value="{$info.name}" size="60">
+                    <a href="javascript:void(0)" id="checkNewsName">检测是否重复</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <label class="control-label x100">创建日期：</label>
+                    <input id="creatingDate" type="text"  name="info[creatingDate]" <if condition="$info.creatingDate eq '' || $info.creatingDate eq null">value="<php>import('ORG.Util.Date');  echo new Date();</php>"<elseif condition="$info.creatingDate neq '' || $info.creatingDate neq null"/>value="{$info.creatingDate}"</if>   size="60">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label class="control-label x100">创建人：</label>
+                    <input id="creatingPer" type="text" name="info[creatingPer]" value="{$info.creatingPer}" size="60">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <label class="control-label x100">场景描述：</label>
+                    <textarea name="info[desc]" style="width:600px;height: 50px" data-toggle="autoheight">{$info.desc}</textarea>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+
+<div class="bjui-pageFooter">
+    <ul>
+        <li><button type="button" class="btn-close" data-icon="close">关闭</button></li>
+        <li><button type="submit" class="btn-default" data-icon="save">保存</button></li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    //检测标题是否重复
+    $("#checkNewsName").click(function(){
+        $.getJSON("__URL__/checkDisceneName",
+                {
+                    name:$("#name").val(),
+                    id:"{$info.id}"
+                },function(json){
+                    $("#checkNewsName").css('color',json.statusCode==200 ? "#0f0" :"#f00").html(json.message);
+                });
+    });
+</script>

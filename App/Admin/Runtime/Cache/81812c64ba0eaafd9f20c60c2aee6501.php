@@ -1,47 +1,47 @@
 <?php if (!defined('THINK_PATH')) exit();?><div class="bjui-pageHeader">
-    <!--<form id="pageForm" class="pageForm" method="post"  action="<?php echo U($Think.ACTION_NAME);?>" >-->
-<!--两者有区别-->
     <form id="pagerForm" data-toggle="ajaxsearch"  action="<?php echo U($Think.ACTION_NAME);?>" method="post">
-         <input type="hidden" name="pageSize" value="<?php echo (session('pageSize')); ?>">
-         <input type="hidden" name="pageCurrent" value="<?php echo (session('pageCurrent')); ?>">
-         <input type="hidden" name="orderField" value="<?php echo (session('orderField')); ?>">
-         <input type="hidden" name="orderDirection" value="<?php echo (session('orderDirection')); ?>">
+        <input type="hidden" name="pageSize" value="<?php echo (session('pageSize')); ?>">
+        <input type="hidden" name="pageCurrent" value="<?php echo (session('pageCurrent')); ?>">
+        <input type="hidden" name="orderField" value="<?php echo (session('orderField')); ?>">
+        <input type="hidden" name="orderDirection" value="<?php echo (session('orderDirection')); ?>">
         <div class="bjui-searchBar">
-            <label>项目名：</label><input type="text" name="search[name]" value="<?php echo ($search["name"]); ?>"/>
+            <label>项目ID：</label><input type="text" name="search[projectID]" value="<?php echo ($search["projectID"]); ?>"/>　　
+            <label>项目名：</label><input type="text" name="search[projectName]" value="<?php echo ($search["projectName"]); ?>"/>
             <button type="submit" class="btn-default" data-icon="search">查询</button>
-            <div class="pull-right">
-                <div class="btn-group">
-                    <button type="button" class="btn-default dropdown-toggle" data-toggle="dropdown" data-icon="copy">功能操作<span class="caret"></span> </button>
-                    <ul class="dropdown-menu right" role="menu">
-                        <li><a href="<?php echo U('add');?>" data-toggle="dialog" data-width="950" data-height="300" data-id="dialog-mask" data-mask="true"><i class="fa fa-plus "></i>新增项目 </a> </li>
-                    </ul>
-                </div>
-            </div>
+            <!--<div class="pull-right">-->
+                <!--<div class="btn-group">-->
+                    <!--<button type="button" class="btn-default dropdown-toggle" data-toggle="dropdown" data-icon="copy">功能操作<span class="caret"></span> </button>-->
+                    <!--<ul class="dropdown-menu right" role="menu">-->
+                        <!--<li><a href="<?php echo U('add');?>" data-toggle="dialog" data-width="950" data-height="300" data-id="dialog-mask" data-mask="true"><i class="fa fa-plus "></i>新增项目 </a> </li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
     </form>
 </div>
-
 
 <div class="bjui-pageContent">
     <!--内容区-->
     <table data-toggle="tablefixed" data-width="100%" data-nowrap="true">
         <thead>
-            <tr>
-                <?php if(is_array($tableFields)): $i = 0; $__LIST__ = $tableFields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$tvo): $mod = ($i % 2 );++$i;?><th <?php if($tvo["order"] == 1): ?>data-order-field="<?php echo ($key); ?>"<?php endif; ?>><?php echo ($tvo["name"]); ?></th><?php endforeach; endif; else: echo "" ;endif; ?>
-                <th width="200">操作</th>
-            </tr>
+        <tr>
+            <?php if(is_array($tableFields)): $i = 0; $__LIST__ = $tableFields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$tvo): $mod = ($i % 2 );++$i;?><th <?php if($tvo["order"] == 1): ?>data-order-field="<?php echo ($key); ?>"<?php endif; ?>><?php echo ($tvo["name"]); ?></th><?php endforeach; endif; else: echo "" ;endif; ?>
+
+        </tr>
         </thead>
 
         <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                 <?php if(is_array($tableFields)): $i = 0; $__LIST__ = $tableFields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$tvo): $mod = ($i % 2 );++$i;?><td><?php echo ($vo["$key"]); ?></td><?php endforeach; endif; else: echo "" ;endif; ?>
-                <td>
-                    <a href="<?php echo U('edit?id='.$vo[id]);?>" class="btn btn-default"data-toggle="dialog" data-width="850" data-height="300" data-id="dialog-mask" data-mask="true">编辑</a>
-                    <a href="<?php echo U('remove?id='.$vo[id].'&status='.$vo[status]);?>" class="btn btn-red" data-toggle="doajax" data-confirm-msg="确定要删除该行信息吗？">删除</a>
-                    <?php if($vo[status] == '项目尚未启动'): ?><a href="<?php echo U('startUp?id='.$vo[id]);?>" class="btn btn-green" data-toggle="doajax" data-confirm-msg="你确定启动项目么？">启动项目</a>
-                       <?php elseif($vo[status] != '项目尚未启动'): ?><a href="#" class="btn btn-green" disabled>已启动项目</a><?php endif; ?>
-                    <!--下面的写法是创建navTab-->
-                    <!--<a href="<?php echo U('process?id='.$vo[id]);?>" class="btn btn-green" data-toggle="navtab" data-id="mynavtab" data-title="项目进度">项目进度</a>-->
-                </td>
+                <!--<td>-->
+                    <!--<a href="<?php echo U('edit?id='.$vo[id]);?>" class="btn btn-default"data-toggle="dialog" data-width="850" data-height="300" data-id="dialog-mask" data-mask="true">编辑</a>-->
+                    <!--<a href="<?php echo U('remove?id='.$vo[id].'&status='.$vo[status]);?>" class="btn btn-red" data-toggle="doajax" data-confirm-msg="确定要删除该行信息吗？">删除</a>-->
+                    <!--<?php if($vo[status] == '项目尚未启动'): ?>-->
+                        <!--<a href="<?php echo U('startUp?id='.$vo[id]);?>" class="btn btn-green" data-toggle="doajax" data-confirm-msg="你确定启动项目么？">启动项目</a>-->
+                        <!--<?php elseif($vo[status] != '项目尚未启动'): ?><a href="#" class="btn btn-green" disabled>已启动项目</a>-->
+                    <!--<?php endif; ?>-->
+                    <!--&lt;!&ndash;下面的写法是创建navTab&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="<?php echo U('process?id='.$vo[id]);?>" class="btn btn-green" data-toggle="navtab" data-id="mynavtab" data-title="项目进度">项目进度</a>&ndash;&gt;-->
+                <!--</td>-->
             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
     </table>
 </div>

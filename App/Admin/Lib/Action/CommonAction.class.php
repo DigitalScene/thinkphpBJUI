@@ -24,6 +24,31 @@ class CommonAction extends Action{
     }
 
 
+    /**
+     * 查询关键词
+     */
+    public function searchKeywords(){
+//        if(IS_POST){
+//            $searchArr=$_POST['search'];
+//            echo $searchArr['name'];exit();
+//        }else{
+            $searchArr=$_POST['search'];
+            return $searchArr;
+//        }
+
+    }
+
+    /**
+     * 生成查询条件
+     */
+    public function searchCondition(){
+        foreach($this->searchKeywords() as $k=> $v){
+            $condition[$k]=array('like','%'.$v.'%');
+        }
+        return $condition;
+    }
+
+
     public function checkLogin() {
         if (isset($_COOKIE[$this->loginMarked])) {
             $cookie = explode("_", $_COOKIE[$this->loginMarked]);

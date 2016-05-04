@@ -11,7 +11,7 @@ class CommonModel extends Model{
     /**
      * 左侧导航菜单
      */
-    public function leftMenu(){
+    public static function leftMenu(){
         //这里填写的是数据库的数据库表名
         $M=M("Leftmenu");
         $condition1['pid']=0;

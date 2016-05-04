@@ -263,17 +263,20 @@ function MainMenuClick(event, treeId, treeNode) {
         <div class="toggleCollapse"><h2><i class="fa fa-bars"></i> 导航栏 <i class="fa fa-bars"></i></h2><a href="javascript:;" class="lock"><i class="fa fa-lock"></i></a></div>
         <div class="panel-group panel-main" data-toggle="accordion" id="bjui-accordionmenu" data-heightbox="#bjui-sidebar" data-offsety="26">
 
+            <!--第一层-->
             <?php foreach($level as $k => $v){ ?>
             <div class="panel panel-default">
                 <div class="panel-heading panelContent">
                     <h4 class="panel-title"><a data-toggle="collapse" data-parent="#bjui-accordionmenu" href="#bjui-collapse<?php echo ($k); ?>" class="<?php if($k == 0){echo 'active';} ?>"><i class="fa fa-caret-square-o-down"></i>&nbsp;<?php echo ($v["name"]); ?></a></h4>
                 </div>
+                <!--第二层-->
                 <div id="bjui-collapse<?php echo ($k); ?>" class="panel-collapse panelContent collapse <?php if($k == 0){echo 'in';} ?>">
                     <div class="panel-body" >
                         <ul id="bjui-tree<?php echo ($k); ?>" class="ztree ztree_main" data-toggle="ztree" data-on-click="MainMenuClick" data-expand-all="<?php if($k == 0){echo 'true';}else{echo 'false';} ?>">
                             <?php foreach($leftMenu[$k] as $k2 => $v2){ ?>
-                            <li data-id="<?php echo ($v2["id"]); ?>" data-pid="<?php echo ($v2["pid"]); ?>" <?php if($v2[url] != '#'){ ?>data-url="<?php echo U($v2['url']);?>" data-tabid="leftMenu_<?php echo ($v2["id"]); ?>" data-fresh="true" data-reloadWarn="true"<?php } ?>><?php echo ($v2["name"]); ?></li>
+                                 <li data-id="<?php echo ($v2["id"]); ?>" data-pid="<?php echo ($v2["pid"]); ?>" <?php if($v2[url] != '#'){ ?>data-url="<?php echo U($v2['url']);?>" data-tabid="leftMenu_<?php echo ($v2["id"]); ?>" data-fresh="true" data-reloadWarn="true"<?php } ?>><?php echo ($v2["name"]); ?></li>
                             <?php } ?>
+
                         </ul>
                     </div>
                 </div>

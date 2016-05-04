@@ -12,7 +12,7 @@
                 <div class="btn-group">
                     <button type="button" class="btn-default dropdown-toggle" data-toggle="dropdown" data-icon="copy">功能操作<span class="caret"></span> </button>
                     <ul class="dropdown-menu right" role="menu">
-                        <li><a href="#"  data-width="1000" data-height="600" data-id="dialog-mask" data-mask="true"><i class="fa fa-plus "></i>新增数据 </a> </li>
+                        <li><a href="#" data-toggle="dialog" data-width="1000" data-height="600" data-id="dialog-mask" data-mask="true"><i class="fa fa-plus "></i>新增数据 </a> </li>
                     </ul>
                 </div>
             </div>
