@@ -41,7 +41,10 @@
                     <td>{$vo.$key}</td>
                 </volist>
                 <td>
-                    <a href="{:U('upload?id='.$vo[id])}" class="btn btn-blue"data-toggle="dialog" data-width="850" data-height="300" data-id="dialog-mask" data-mask="true">上传</a>
+                    <a href="{:U('upload?id='.$vo[id])}" class="btn btn-blue"data-toggle="dialog" data-width="1200" data-height="500" data-id="dialog-mask" data-mask="true">上传</a>
+                    <a href="{:U('lookup?id='.$vo[id])}" class="btn btn-blue"data-toggle="dialog" data-width="1200" data-height="500" data-id="dialog-mask" data-mask="true">预览</a>
+                    <a href="{:U('download?id='.$vo[id])}" class="btn btn-blue"data-toggle="dialog" data-width="1200" data-height="500" data-id="dialog-mask" data-mask="true">下载</a>
+
                 </td>
                 <td>
                     <a href="{:U('edit?id='.$vo[id])}" class="btn btn-default"data-toggle="dialog" data-width="880" data-height="250" data-id="dialog-mask" data-mask="true">编辑</a>

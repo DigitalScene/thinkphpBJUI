@@ -7,7 +7,7 @@
          <input type="hidden" name="orderField" value="<?php echo (session('orderField')); ?>">
          <input type="hidden" name="orderDirection" value="<?php echo (session('orderDirection')); ?>">
         <div class="bjui-searchBar">
-            <label>项目名：</label><input type="text" name="search[name]" value="<?php echo ($search["name"]); ?>"/>
+            <label >项目名：</label><input type="text" name="search[name]" value="<?php echo ($search["name"]); ?>"/>
             <button type="submit" class="btn-default" data-icon="search">查询</button>
             <div class="pull-right">
                 <div class="btn-group">
@@ -35,7 +35,7 @@
         <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                 <?php if(is_array($tableFields)): $i = 0; $__LIST__ = $tableFields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$tvo): $mod = ($i % 2 );++$i;?><td><?php echo ($vo["$key"]); ?></td><?php endforeach; endif; else: echo "" ;endif; ?>
                 <td>
-                    <a href="<?php echo U('edit?id='.$vo[id]);?>" class="btn btn-default"data-toggle="dialog" data-width="850" data-height="300" data-id="dialog-mask" data-mask="true">编辑</a>
+                    <a href="<?php echo U('edit?id='.$vo[id]);?>" class="btn btn-default "data-toggle="dialog" data-width="850" data-height="300" data-id="dialog-mask" data-mask="true">编辑</a>
                     <a href="<?php echo U('remove?id='.$vo[id].'&status='.$vo[status]);?>" class="btn btn-red" data-toggle="doajax" data-confirm-msg="确定要删除该行信息吗？">删除</a>
                     <?php if($vo[status] == '项目尚未启动'): ?><a href="<?php echo U('startUp?id='.$vo[id]);?>" class="btn btn-green" data-toggle="doajax" data-confirm-msg="你确定启动项目么？">启动项目</a>
                        <?php elseif($vo[status] != '项目尚未启动'): ?><a href="#" class="btn btn-green" disabled>已启动项目</a><?php endif; ?>

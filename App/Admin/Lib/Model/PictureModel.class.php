@@ -6,7 +6,7 @@
  * Date: 2016/4/27
  * Time: 17:45
  */
-class PictureModel extends Model{
+class PictureModel extends BaseModel{
 
     /**
      * 定义
@@ -30,8 +30,32 @@ class PictureModel extends Model{
 
     public $tableFields=array(
         'id'=>array('name'=>'ID','order'=>'1'),
-        'cid'=>array('name'=>'类别','order'=>'1'),
-
-
+        'picsrc'=>array('name'=>'图片路径','order'=>'1'),
+        'disceneID'=>array('name'=>'场景id','order'=>'1'),
+        'level'=>array('name'=>'等级','order'=>'1'),
     );
+
+    /**
+     * 添加图片
+     * @param $data
+     * @return array
+     */
+    public function addPicture($data){
+        return $this->insert($param=array('modelName'=>$this->model),$data);
+    }
+
+    /**
+     * 根据条件查找相应的数据
+     * @param $condition
+     */
+    public function findAllByDisceneId($condition){
+        $list=$this->getAllList($param=array('modelName'=>$this->model,'field'=>'*','order'=>'id DESC'),$condition);
+
+//        foreach ($list as $k => $v) {
+//            $list[$k]['picsrc']="<img src='$v[picsrc]' style='height: 110px;width: 110px;margin-left: 8px;'/>";
+//        }
+
+        return $list;
+    }
+
 }

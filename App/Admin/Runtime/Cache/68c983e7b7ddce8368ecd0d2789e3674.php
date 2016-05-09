@@ -36,7 +36,10 @@
         <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                 <?php if(is_array($tableFields)): $i = 0; $__LIST__ = $tableFields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$tvo): $mod = ($i % 2 );++$i;?><td><?php echo ($vo["$key"]); ?></td><?php endforeach; endif; else: echo "" ;endif; ?>
                 <td>
-                    <a href="<?php echo U('upload?id='.$vo[id]);?>" class="btn btn-blue"data-toggle="dialog" data-width="850" data-height="300" data-id="dialog-mask" data-mask="true">上传</a>
+                    <a href="<?php echo U('upload?id='.$vo[id]);?>" class="btn btn-blue"data-toggle="dialog" data-width="1200" data-height="500" data-id="dialog-mask" data-mask="true">上传</a>
+                    <a href="<?php echo U('lookup?id='.$vo[id]);?>" class="btn btn-blue"data-toggle="dialog" data-width="1200" data-height="500" data-id="dialog-mask" data-mask="true">预览</a>
+                    <a href="<?php echo U('download?id='.$vo[id]);?>" class="btn btn-blue"data-toggle="dialog" data-width="1200" data-height="500" data-id="dialog-mask" data-mask="true">下载</a>
+
                 </td>
                 <td>
                     <a href="<?php echo U('edit?id='.$vo[id]);?>" class="btn btn-default"data-toggle="dialog" data-width="880" data-height="250" data-id="dialog-mask" data-mask="true">编辑</a>

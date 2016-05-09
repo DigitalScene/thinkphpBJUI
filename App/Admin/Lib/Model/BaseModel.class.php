@@ -45,6 +45,18 @@ class BaseModel extends Model{
         return $list;
     }
 
+    /**
+     * 获取列表
+     * @param array $param 一维数组数据
+     * @param string $condition 一维数组数据
+     * return array 二维数组数据
+     */
+    public static function getAllList($param=array('modelName'=>'','field'=>'*','order'=>'','tablePrefix'=>'','connection'=>'','modelType'=>'','relationModel'=>''),$condition=''){
+        $M=self::getModel($param);
+        $list=$M->field($param['field'])->where($condition)->order($param['order'])->select();
+        return $list;
+    }
+
 
     /**
     +----------------------------------------------------------

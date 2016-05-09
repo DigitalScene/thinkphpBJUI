@@ -16,6 +16,8 @@
 <link href="<?php echo C('STATIC_PATH');?>Plugins/BJUI/plugins/niceValidator/jquery.validator.css" rel="stylesheet">
 <link href="<?php echo C('STATIC_PATH');?>Plugins/BJUI/plugins/bootstrapSelect/bootstrap-select.css" rel="stylesheet">
 <link href="/Static/Plugins/BJUI/themes/css/FA/css/font-awesome.min.css" rel="stylesheet">
+
+
 <style type="text/css">
     tr{height: 32px; line-height: 32px} /* 优化表格行高 */
     .resize-head{height:0;} /* 修正表格行距增加后表头显示问题 */
@@ -34,8 +36,14 @@
 <script src="<?php echo C('STATIC_PATH');?>Plugins/BJUI/js/jquery-1.7.2.min.js"></script>
 <script src="<?php echo C('STATIC_PATH');?>Plugins/BJUI/js/jquery.cookie.js"></script>
 <!--[if lte IE 9]>
-<script src="<?php echo C('STATIC_PATH');?>Plugins/BJUI/other/jquery.iframe-transport.js"></script>    
+<script src="<?php echo C('STATIC_PATH');?>Plugins/BJUI/other/jquery.iframe-transport.js"></script>
 <![endif]-->
+
+<script type="text/javascript" src="<?php echo C('STATIC_PATH');?>/Plugins/webuploader/js/global.js"></script>
+<script type="text/javascript" src="<?php echo C('STATIC_PATH');?>/Plugins/webuploader/js/webuploader.js"></script>
+<!--<script type="text/javascript" src="<?php echo C('STATIC_PATH');?>/Plugins/webuploader/js/demo.js"></script>-->
+
+
 <!-- BJUI.all 分模块压缩版 -->
 <!-- <script src="<?php echo C('STATIC_PATH');?>Plugins/BJUI/js/bjui-all.js"></script> -->
 
@@ -68,7 +76,7 @@
 
 <!-- plugins -->
 <!-- swfupload for uploadify && kindeditor -->
-<script src="<?php echo C('STATIC_PATH');?>Plugins/BJUI/plugins/swfupload/swfupload.js"></script>
+<!--<script src="<?php echo C('STATIC_PATH');?>Plugins/BJUI/plugins/swfupload/swfupload.js"></script>-->
 <!-- kindeditor -->
 <script src="/Static/Plugins/kindeditor/kindeditor-all.js"></script>
 <script src="/Static/Plugins/kindeditor/lang/zh_CN.js"></script>
@@ -95,7 +103,9 @@
 <script src="<?php echo C('STATIC_PATH');?>Plugins/BJUI/plugins/other/jquery.autosize.js"></script>
 <link href="<?php echo C('STATIC_PATH');?>Plugins/BJUI/plugins/uploadify/css/uploadify.css" rel="stylesheet">
 <script src="<?php echo C('STATIC_PATH');?>Plugins/BJUI/plugins/uploadify/scripts/jquery.uploadify.min.js"></script>
+
 <script src="__PUBLIC__/Js/functions.js"></script>
+
 <!-- init -->
 <script type="text/javascript">
 $(function() {
