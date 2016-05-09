@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : PHPMysql
+Source Server         : PHPMySQL
 Source Server Version : 50547
 Source Host           : localhost:3307
 Source Database       : thinkphpbjui
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50547
 File Encoding         : 65001
 
-Date: 2016-05-04 10:16:47
+Date: 2016-05-09 18:50:09
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -323,13 +323,14 @@ CREATE TABLE `ec_discene` (
   `dataUploadID` int(11) DEFAULT NULL,
   `isDel` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ec_discene
 -- ----------------------------
 INSERT INTO `ec_discene` VALUES ('3', '大厅场景', '2016-05-03', 'yang', '飘渺仙域', '22', '0');
 INSERT INTO `ec_discene` VALUES ('4', '侧室场景', '2016-05-03', 'qiu', '阳光明媚', '22', '1');
+INSERT INTO `ec_discene` VALUES ('5', '陶瓷场景', '2016-05-07', 'yang', '扶摇直上', '22', '0');
 
 -- ----------------------------
 -- Table structure for ec_leftmenu
@@ -445,7 +446,7 @@ CREATE TABLE `ec_operationlog` (
   `cUid` int(11) DEFAULT NULL,
   `cTime` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=108 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=138 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ec_operationlog
@@ -557,22 +558,78 @@ INSERT INTO `ec_operationlog` VALUES ('104', 'UPDATE `ec_process` SET `id`=13,`p
 INSERT INTO `ec_operationlog` VALUES ('105', 'INSERT INTO `ec_discene` (`id`,`dataUploadID`,`name`,`creatingDate`,`creatingPer`,`desc`) VALUES (0,22,\'大厅场景\',\'2016-05-03 22:10:58\',\'yang\',\'飘渺仙域\')', '1', '1462284677');
 INSERT INTO `ec_operationlog` VALUES ('106', 'INSERT INTO `ec_discene` (`isDel`,`id`,`dataUploadID`,`name`,`creatingDate`,`creatingPer`,`desc`) VALUES (0,0,22,\'侧室场景\',\'2016-05-03 23:12:30\',\'qiu\',\'阳光明媚\')', '1', '1462288389');
 INSERT INTO `ec_operationlog` VALUES ('107', 'UPDATE `ec_discene` SET `isDel`=1 WHERE ( id=4 )', '1', '1462288417');
+INSERT INTO `ec_operationlog` VALUES ('108', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\3\\\\2016-05-07\\\\ak38r5\\\\1.jpg\',3,0)', '1', '1462609126');
+INSERT INTO `ec_operationlog` VALUES ('109', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\3\\\\2016-05-07\\\\v62tjz\\\\1.jpg\',3,0)', '1', '1462609294');
+INSERT INTO `ec_operationlog` VALUES ('110', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\3\\\\2016-05-07\\\\1q94r1\\\\1.jpg\',3,0)', '1', '1462609485');
+INSERT INTO `ec_operationlog` VALUES ('111', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\3\\\\2016-05-07\\\\o8pll0\\\\1.jpg\',3,0)', '1', '1462610467');
+INSERT INTO `ec_operationlog` VALUES ('112', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\3\\\\2016-05-07\\\\dmfg5m\\\\2.jpg\',3,0)', '1', '1462610468');
+INSERT INTO `ec_operationlog` VALUES ('113', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\3\\\\2016-05-07\\\\5bv49m\\\\5.jpg\',3,0)', '1', '1462610528');
+INSERT INTO `ec_operationlog` VALUES ('114', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\3\\\\2016-05-07\\\\0cvvp5\\\\6.jpg\',3,0)', '1', '1462610528');
+INSERT INTO `ec_operationlog` VALUES ('115', 'INSERT INTO `ec_discene` (`isDel`,`id`,`dataUploadID`,`name`,`creatingDate`,`creatingPer`,`desc`) VALUES (0,0,22,\'陶瓷场景\',\'2016-05-07 16:46:50\',\'yang\',\'扶摇直上\')', '1', '1462610896');
+INSERT INTO `ec_operationlog` VALUES ('116', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-07\\\\yh6uza\\\\5.jpg\',5,0)', '1', '1462610906');
+INSERT INTO `ec_operationlog` VALUES ('117', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-07\\\\ce0ire\\\\6.jpg\',5,0)', '1', '1462610907');
+INSERT INTO `ec_operationlog` VALUES ('118', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-07\\\\jxorhl\\\\7.jpg\',5,0)', '1', '1462610907');
+INSERT INTO `ec_operationlog` VALUES ('119', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-07\\\\xy4kwf\\\\8.jpg\',5,0)', '1', '1462610907');
+INSERT INTO `ec_operationlog` VALUES ('120', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\v1dreu\\\\25.jpg\',5,0)', '1', '1462645512');
+INSERT INTO `ec_operationlog` VALUES ('121', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\6q0lpf\\\\26.jpg\',5,0)', '1', '1462645512');
+INSERT INTO `ec_operationlog` VALUES ('122', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\c0dhgh\\\\27.jpg\',5,0)', '1', '1462645512');
+INSERT INTO `ec_operationlog` VALUES ('123', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\9wassb\\\\28.PNG\',5,0)', '1', '1462645512');
+INSERT INTO `ec_operationlog` VALUES ('124', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\a2lnli\\\\29.jpg\',5,0)', '1', '1462645512');
+INSERT INTO `ec_operationlog` VALUES ('125', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\tltksh\\\\13.jpg\',5,0)', '1', '1462646300');
+INSERT INTO `ec_operationlog` VALUES ('126', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\p4g52w\\\\14.jpg\',5,0)', '1', '1462646300');
+INSERT INTO `ec_operationlog` VALUES ('127', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\jsl6qn\\\\15.jpg\',5,0)', '1', '1462646300');
+INSERT INTO `ec_operationlog` VALUES ('128', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\dqekpu\\\\16.jpg\',5,0)', '1', '1462646300');
+INSERT INTO `ec_operationlog` VALUES ('129', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\i4didp\\\\17.jpg\',5,0)', '1', '1462646300');
+INSERT INTO `ec_operationlog` VALUES ('130', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\ahwl6m\\\\18.jpg\',5,0)', '1', '1462646301');
+INSERT INTO `ec_operationlog` VALUES ('131', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\tprhs9\\\\19.jpg\',5,0)', '1', '1462646301');
+INSERT INTO `ec_operationlog` VALUES ('132', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\7z9tfx\\\\20.jpg\',5,0)', '1', '1462646301');
+INSERT INTO `ec_operationlog` VALUES ('133', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\ah58ln\\\\21.jpg\',5,0)', '1', '1462646301');
+INSERT INTO `ec_operationlog` VALUES ('134', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\3qi1j9\\\\22.jpg\',5,0)', '1', '1462646301');
+INSERT INTO `ec_operationlog` VALUES ('135', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\urkfed\\\\23.jpg\',5,0)', '1', '1462646301');
+INSERT INTO `ec_operationlog` VALUES ('136', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\oa2wtg\\\\24.jpg\',5,0)', '1', '1462646301');
+INSERT INTO `ec_operationlog` VALUES ('137', 'INSERT INTO `ec_picture` (`picsrc`,`disceneID`,`level`) VALUES (\'Uploads/Uploads\\\\5\\\\2016-05-08\\\\csqh89\\\\28.PNG\',5,0)', '1', '1462699183');
 
 -- ----------------------------
 -- Table structure for ec_picture
 -- ----------------------------
 DROP TABLE IF EXISTS `ec_picture`;
 CREATE TABLE `ec_picture` (
-  `id` int(11) NOT NULL DEFAULT '0',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `picsrc` varchar(50) DEFAULT NULL,
   `disceneID` int(11) DEFAULT NULL,
   `level` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ec_picture
 -- ----------------------------
+INSERT INTO `ec_picture` VALUES ('4', 'Uploads/Uploads\\3\\2016-05-07\\dmfg5m\\2.jpg', '3', '0');
+INSERT INTO `ec_picture` VALUES ('3', 'Uploads/Uploads\\3\\2016-05-07\\o8pll0\\1.jpg', '3', '0');
+INSERT INTO `ec_picture` VALUES ('5', 'Uploads/Uploads\\3\\2016-05-07\\5bv49m\\5.jpg', '3', '0');
+INSERT INTO `ec_picture` VALUES ('6', 'Uploads/Uploads\\3\\2016-05-07\\0cvvp5\\6.jpg', '3', '0');
+INSERT INTO `ec_picture` VALUES ('7', 'Uploads/Uploads\\5\\2016-05-07\\yh6uza\\5.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('8', 'Uploads/Uploads\\5\\2016-05-07\\ce0ire\\6.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('9', 'Uploads/Uploads\\5\\2016-05-07\\jxorhl\\7.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('10', 'Uploads/Uploads\\5\\2016-05-07\\xy4kwf\\8.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('11', 'Uploads/Uploads\\5\\2016-05-08\\v1dreu\\25.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('12', 'Uploads/Uploads\\5\\2016-05-08\\6q0lpf\\26.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('13', 'Uploads/Uploads\\5\\2016-05-08\\c0dhgh\\27.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('14', 'Uploads/Uploads\\5\\2016-05-08\\9wassb\\28.PNG', '5', '0');
+INSERT INTO `ec_picture` VALUES ('15', 'Uploads/Uploads\\5\\2016-05-08\\a2lnli\\29.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('16', 'Uploads/Uploads\\5\\2016-05-08\\tltksh\\13.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('17', 'Uploads/Uploads\\5\\2016-05-08\\p4g52w\\14.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('18', 'Uploads/Uploads\\5\\2016-05-08\\jsl6qn\\15.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('19', 'Uploads/Uploads\\5\\2016-05-08\\dqekpu\\16.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('20', 'Uploads/Uploads\\5\\2016-05-08\\i4didp\\17.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('21', 'Uploads/Uploads\\5\\2016-05-08\\ahwl6m\\18.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('22', 'Uploads/Uploads\\5\\2016-05-08\\tprhs9\\19.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('23', 'Uploads/Uploads\\5\\2016-05-08\\7z9tfx\\20.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('24', 'Uploads/Uploads\\5\\2016-05-08\\ah58ln\\21.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('25', 'Uploads/Uploads\\5\\2016-05-08\\3qi1j9\\22.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('26', 'Uploads/Uploads\\5\\2016-05-08\\urkfed\\23.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('27', 'Uploads/Uploads\\5\\2016-05-08\\oa2wtg\\24.jpg', '5', '0');
+INSERT INTO `ec_picture` VALUES ('28', 'Uploads/Uploads\\5\\2016-05-08\\csqh89\\28.PNG', '5', '0');
 
 -- ----------------------------
 -- Table structure for ec_process
